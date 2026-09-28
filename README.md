@@ -16,6 +16,18 @@ DeepSeek Harness 插件：一键配置任意 OpenAI 兼容 API 并自动带思�
 - 模型行改为两个复选框「启用 / 思考」：前者决定该模型是否写入配置
 - 列表内一键复制 provider（route 自动追加 `-copy` 并递增避让、`apiKeyEnv` 沿用源）
 
+## 截图
+
+Web → 设置 → OtherAPI：
+
+![设置面板 · 1](docs/screenshot-1.png)
+
+![设置面板 · 2](docs/screenshot-2.png)
+
+![设置面板 · 3](docs/screenshot-3.png)
+
+> 截图不随 npm 包发布（未列入 `files` 白名单），仅在仓库中提供。
+
 ## 安装
 
 从 GitHub 仓库（推荐）：

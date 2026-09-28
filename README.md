@@ -20,11 +20,11 @@ DeepSeek Harness 插件：一键配置任意 OpenAI 兼容 API 并自动带思�
 
 Web → 设置 → OtherAPI：
 
-![设置面板 · 1](docs/screenshot-1.png)
-
-![设置面板 · 2](docs/screenshot-2.png)
-
-![设置面板 · 3](docs/screenshot-3.png)
+<p align="center">
+  <img src="docs/screenshot-1.png" width="32%" alt="设置面板 · 1" />
+  <img src="docs/screenshot-2.png" width="32%" alt="设置面板 · 2" />
+  <img src="docs/screenshot-3.png" width="32%" alt="设置面板 · 3" />
+</p>
 
 > 截图不随 npm 包发布（未列入 `files` 白名单），仅在仓库中提供。
 

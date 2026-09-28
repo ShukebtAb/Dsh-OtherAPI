@@ -1,0 +1,68 @@
+{
+  "name": "dsh-other-api",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "DeepSeek Harness 插件：一键配置任意 OpenAI 兼容 API 并自动带思考模式，同时规避 developer 角色被第三方端点拒绝（content_filter）的问题。基于 dsh-plugin-thinking-api@0.1.8（MIT，作者 qjf44）改造，适配 DSH 0.1.7-rc.2 的 entry-config 模型。",
+  "main": "lib/index.mjs",
+  "exports": {
+    ".": "./lib/index.mjs",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.mjs",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check lib/index.mjs && node --check lib/client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1 <5",
+    "@deepseek-ai/dsh-llm": ">=0.1.7-rc.1 <0.1.8",
+    "@deepseek-ai/dsh-llm-pi-ai": ">=0.1.7-rc.1 <0.1.8",
+    "@deepseek-ai/dsh-credentials": ">=0.1.7-rc.1 <0.1.8",
+    "@deepseek-ai/dsh-launch-environment": ">=0.1.7-rc.1 <0.1.8",
+    "@deepseek-ai/dsh-settings": ">=0.1.7-rc.1 <0.1.8",
+    "@deepseek-ai/schemastery": ">=3.18.4 <4",
+    "@earendil-works/pi-ai": "^0.82.1",
+    "react": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShukebtAb/Dsh-OtherAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShukebtAb/Dsh-OtherAPI/issues"
+  },
+  "homepage": "https://github.com/ShukebtAb/Dsh-OtherAPI#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "openai-compatible",
+    "thinking",
+    "reasoning",
+    "api"
+  ]
+}
